@@ -1,1 +1,1 @@
-# A calculator to help you determine your economic freedom
+# Economic freedom calculator
