@@ -1,0 +1,51 @@
+<head>
+  <title>Ad Matai? | עד מתי?</title>
+</head>
+
+<body>
+  <div align='center'>
+    <h1>?עד מתי</h1>
+    <h3>מחשבון לחישוב זמן היציאה מעבדות לחירות כלכלית</h3>
+    <br/>
+  </div>
+  {{> calcForm}}
+</body>
+
+
+
+<template name="calcForm">
+  <div dir='rtl'>
+    {{#autoForm id="freedomFormSchema"  schema=freedomFormSchema collection="Freedom" type="normal" }}
+      
+      {{> afQuickField name='הכנסות'}}
+
+      {{> afQuickField name='הוצאות'}}
+
+      <h4>כך שבסה"כ אני חוסכ/ת: {{currentFieldValue}} ש"ח בחודש.</h4>
+      <br/>
+
+      {{> afQuickField name='תשואה_שנתית'}}
+
+      {{> afQuickField name='שיעור_משיכה_לאחר_הפרישה'}}
+
+      <div class="final-result">
+        <h4>לאור זאת, נותרו לי עוד:<div class="result"></div> שנים לעצמאות כלכלית!</h4>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">חשב!</button> 
+        <!--<button type="button" class="btn btn-calc">חשבו!</button>!-->
+        <button type="reset" class="btn btn-default">נקו טופס</button>
+      </div>
+    {{/autoForm}}
+    <!--{{> quickForm collection="Freedom" id="insertFreedomForm" type="insert"}}-->
+  </div>
+</template>
+
+
+
+<!--
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+-->
